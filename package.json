@@ -1,0 +1,52 @@
+{
+  "name": "Template",
+  "version": "1.0.0",
+  "description": "Sample for Simple React Application using TypeScript/WebPack/React-Query",
+  "browser": "browser.js",
+  "main": "dist/browser.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "startz": "node dist/browser.js",
+    "vercel-build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "prettier": "prettier \"./src/**/*.ts\" \"./src/**/*.tsx\" --write",
+    "test": "tsc --outDir . --sourceMap false && tape tests/**/*.js",
+    "release": "npm version patch && git push --follow-tags && npm publish"
+  },
+  "author": "shinuq",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-query": "^3.13.10",
+    "react-scripts": "^4.0.3",
+    "webpack": "^4.44.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/tape": "^4.13.0",
+    "@types/webpack": "^4.41.26",
+    "prettier": "2.2.1",
+    "source-map-loader": "^2.0.1",
+    "tape": "^5.2.1",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.2.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
